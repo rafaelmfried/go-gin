@@ -2,3 +2,14 @@
 @base_url=http://localhost:8000
 ###
 GET {{base_url}}/helthz
+
+###
+POST {{base_url}}/categories
+Content-Type: application/json
+
+{
+  "name": "teste"
+}
+
+###
+GET {{base_url}}/categories
