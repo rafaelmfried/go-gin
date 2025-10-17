@@ -8,12 +8,12 @@ import (
 
 func main() {
   router := gin.Default()
-  router.GET("/ping", response)
-  router.Run()
+  router.GET("/helthz", helthz)
+  router.Run(":8000")
 }
 
-func response(context *gin.Context) {
+func helthz(context *gin.Context) {
 	context.JSON(http.StatusOK, gin.H{
-		"message": "ping 2",
+		"success": true,
 	})
 }
